@@ -15,9 +15,6 @@ try:
     else:
         extraHours = hours - 40
         pay = rate * (40 + extraHours * 1.5)
-
     print(pay)
 except ValueError:
     print("Please enter only numerical values.")
-
-
