@@ -14,6 +14,7 @@ def get_value(list_of_dict, key):
         if key in dictionary:
             return f"{key} : {dictionary[key]}"
 
+
 try:
     user_input = input("Enter the key: ")
     result = get_value(dictionaries, user_input)
