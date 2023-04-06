@@ -13,9 +13,6 @@ def get_value(list_of_dict, key):
     for dictionary in list_of_dict:
         if key in dictionary:
             return f"{key} : {dictionary[key]}"
-        # else:
-        #     raise KeyError
-
 
 try:
     user_input = input("Enter the key: ")
