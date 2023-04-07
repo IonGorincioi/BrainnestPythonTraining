@@ -5,7 +5,7 @@
 
 dictionaries = [{'one': 1, 'two': 2, 'three': 3},
                 {'four': 4, 'five': 5},
-                {'one': 6, 'seven': 7},
+                {'six': 6, 'seven': 7},
                 {'eight': 8, 'nine': 9, 'ten': 10}]
 
 
@@ -13,6 +13,8 @@ def get_value(list_of_dict, key):
     for dictionary in list_of_dict:
         if key in dictionary:
             return f"{key} : {dictionary[key]}"
+    else:
+        raise KeyError
 
 
 try:
@@ -20,4 +22,4 @@ try:
     result = get_value(dictionaries, user_input)
     print(result)
 except KeyError:
-    print(f"{user_input} key is not present in dictionaries")
+    print(f'The key "{user_input}" doesn\'t exist in dictionaries')
