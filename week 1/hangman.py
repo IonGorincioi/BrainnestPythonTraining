@@ -27,62 +27,80 @@ You guessed the word java !
 '''
 import random
 
-# def open_file(filepath):
-with open("files/words.txt", 'r') as file:
+display = []  # a list that will hold the letters of a word to be guessed
+guessed_letters = []  # a list that will hold all the letters used by the user
+wrong_guesses = 6
+
+# Open a text file that contains a list of words
+# and copies all the words in a list
+with open("Assignments/3. Hangman Project/files/words.txt", 'r') as file:
     content = file.readlines()
 file.close()
 
-# def split_items(content)
+# iterate over the words from the list, splitting them by
+# new line and copies all the elements in a new list
 new_content = []
 for item in content:
     item = item.split("\n")
     new_content.append(item[0])
 content = new_content
 
-# def hide_word(content)
-display = []  # optional
+# randomly choose a word from the "content" list
 word = random.choice(content)
+
+# iterates over letters in the word and replace each letter
+# with an underscore in "display" list
 for letter in word:
     display = ['_'] * len(word)
 
-# def print_word():
-print(f"\nWord: {display}")
+# displays a series of underscores on the screen
+print(f"\nWord: {' '.join(display)}")
 
 end_of_game = False
 while not end_of_game:
+
+    """prompt the user to enter a letter"""
     user_guess = input("Guess a letter: ").lower()
 
-    # def used_letter():
-    """ 
-    Checks if user attempted to guess the letter already
-    """
-    if user_guess in display:
+    """the letter is added to "guessed_letters" list """
+    # guessed_letters.append(user_guess)
+
+    """Check if the letter is already in "guessed_letters" list and return a message"""
+    # Checks if user guessed the letter already
+    if user_guess in guessed_letters:
         print(f"You already guessed letter {user_guess} ")
 
-    # def display_letter():
+    """Check whether the user guessed any letters and displays them"""
+    # iterate over the letters in the word and displays
+    # the right letters inside "display" list.
     for index in range(len(word)):
         letter = word[index]
         if letter == user_guess:
             display[index] = letter
     print(f"\nWord: {' '.join(display)}")
 
-guessed_letters = []
-wrong_guesses = 1
-if user_guess in guessed_letters:
-    print(f"You already tried {user_guess}")
+    """Throw a message if user uses the same letter multiple times, """
+    # check for the wrong guesses
+    if user_guess in guessed_letters:
+        print(f"You already tried {user_guess}")
 
-elif user_guess not in word:
-    print(f"The word doesn't contain letter {user_guess}")
-    wrong_guesses -= 1
-    if wrong_guesses == 0:
-        end_of_game = True
-        print(f'You lose.')
+    """If user_guess does not match any letter in the word, it trows a message and 
+        decrement the amount of wrong guesses allowed"""
+    if user_guess not in word:
+        print(f"The word doesn't contain letter {user_guess}")
+        wrong_guesses = wrong_guesses - 1
+        # print(f"You have {wrong_guesses} guesses left.")
+        if wrong_guesses == 0:
+            end_of_game = True
+            print(f'You lose.')
+            break
 
-    guessed_letters.append(user_guess)
-    print(f"attempts: {guessed_letters}")
-    print(f"\nWord: {' '.join(display)}")
+        guessed_letters.append(user_guess)
+        print(f"Used letters: {guessed_letters}")
+        print(f"\nWord: {' '.join(display)}")
 
-    if not _ in ' '.join(display):
+    if '_' not in display:
         end_of_game = True
         print("You win")
+    print(f"You have {wrong_guesses} guesses left.")
 print(f"You guessed the word {word}")

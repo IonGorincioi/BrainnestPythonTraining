@@ -25,80 +25,55 @@ def random_word(word_list):
     return selected_word
 
 
-def hide_word(selected_word):
-    """
-    This function hides the letters of the selected
-    word, returning a number of underscores.
-    """
-    random_word(selected_word)
-    for letter in selected_word:
-        hidden_word = ['_'] * len(selected_word)
-    return hidden_word
+display = []  # a list that will hold the letters of a word to be guessed
+used_letters = []  # a list that will hold all the letters used by the user
+wrong_guesses = 6
 
-
-def display_word(hidden_word):
-    """
-    Displays underscores instead of letters  on the screen
-    """
-    return f"\nWord: {' '.join(hidden_word)}"
-
-
-def check_letter_existence(selected_word, letter_guessed):
-    """
-    Checks whether the guessed letter is present in randomly selected word
-    """
-    letter_exists = False
-    for index in range(len(selected_word)):
-        letter = selected_word[index]
-        if letter == letter_guessed:
-            letter_exists = True
-    return letter_exists
-
-    #
-    #         display[index] = letter_guessed
-    #
-    # print(display_word(selected_word[index]))
-
-
-def unmask_guessed_letters(selected_word, ):
-    letter_guessed = check_letter_existence(selected_word, )
-    display = hide_word(selected_word)
-    if letter_guessed:
-        for index in range(len(selected_word)):
-            display[index] = letter_guessed
-        print(display_word(selected_word))
-
-# def display_incomplete_word(selected_word, guess):
-#     hidden_word = hide_word(selected_word)
-#     for index in range(len(selected_word)):
-#         letter = hidden_word[index]
-#         if letter == guess:
-#             hidden_word[index] = letter
-#     return display_word(selected_word)
-
-#     if letter == user_guess:
-#         display[index] = letter
-# print(f"\nWord: {' '.join(display)}")
+print("-----------------------------------------------")
+print(f"You are allowed {wrong_guesses} wrong guesses.")
 
 
 available_words = words("files/words.txt")
-print(available_words)
-
 word_to_guess = random_word(available_words)
-print(word_to_guess)
 
-masked_word = hide_word(word_to_guess)
-print(masked_word)
+for letter in word_to_guess:
+    hidden_word = ['_'] * len(word_to_guess)
 
-print(display_word(masked_word))
-
+print(f"\n\t\tWord: {' '.join(hidden_word)}\n")
+print("-----------------------------------------------")
 end_of_game = False
 while not end_of_game:
+
+    print(f"You have {wrong_guesses} tries left")
     user_guess = input("Guess a letter: ").lower()
 
-    print(check_letter_existence(word_to_guess, user_guess))
-    # unmask_guessed_letters(word_to_guess)
+    # Check if user guessed the letter already
+    if user_guess in used_letters:
+        print(f"You have already guessed letter {user_guess} ")
+    #
+    elif user_guess not in used_letters:
+        used_letters.append(user_guess)
 
+        # iterate over the letters in the word and displays
+        # the right letters inside "display" list.
+        for index in range(len(word_to_guess)):
+            letter = word_to_guess[index]
+            if letter == user_guess:
+                hidden_word[index] = letter
 
-#     incomplete_word = display_incomplete_word(word, user_guess)
-#     print(incomplete_word)
+        if user_guess not in hidden_word:
+            print(f"The word doesn't contain letter {user_guess}")
+            wrong_guesses = wrong_guesses - 1
+            if wrong_guesses == 0:
+                end_of_game = True
+                print(f'\nYou lose!')
+                break
+
+    print(f"Used letters: {used_letters}\n")
+    print(f"\t\tWord: {' '.join(hidden_word)}\n")
+    if '_' not in hidden_word:
+        end_of_game = True
+        print("Congratulation! You win!")
+
+    print("-----------------------------------------------")
+print(f'The word is: "{word_to_guess}".')
