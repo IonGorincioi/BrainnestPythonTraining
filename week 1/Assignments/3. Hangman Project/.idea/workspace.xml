@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="88079fe1-f495-4393-b69b-72f7cce97e35" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../1. Conditionals/conditionals.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2. Error handling/_error_handling.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../FRI - 07.04.2023/couch_files/chap02.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../FRI - 07.04.2023/couch_files/chap03.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../FRI - 07.04.2023/couch_files/chap04.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week 2/Assignments/1. while_loop/while_loop.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week 2/Assignments/2. for_loop/for_loop.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week 2/Assignments/3. project_euler/project_euler_01.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week 2/TUE - 11-04-2023/Classroom exercises/conver_filecontent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week 2/TUE - 11-04-2023/Classroom exercises/dict_email_and_frequency.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week 2/TUE - 11-04-2023/Classroom exercises/file.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week 2/TUE - 11-04-2023/Classroom exercises/largest_number.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week 2/TUE - 11-04-2023/Classroom exercises/mbox-short.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week 2/TUE - 11-04-2023/Classroom exercises/select_emails_from_file.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week 2/TUE - 11-04-2023/Classroom exercises/upper_case.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week 2/TUE - 11-04-2023/couch_files/chap05.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week 2/TUE - 11-04-2023/couch_files/file_handling.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="2OH4yXaaluSzh7z2T5eetlIO6bc" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="88079fe1-f495-4393-b69b-72f7cce97e35" name="Changes" comment="" />
+      <created>1681204427410</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1681204427410</updated>
+    </task>
+    <servers />
+  </component>
+</project>
