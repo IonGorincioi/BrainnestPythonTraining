@@ -2,10 +2,10 @@
 # it to a list, but only if the input is a number greater than 10.
 
 numbers = []
-end_of_loop = True
+end_of_loop = False
 status = ""
 print("Type 'done' to exit. ")
-while end_of_loop:
+while not end_of_loop:
     user_input = input("Enter an input: ")
 
     if user_input.lower() != 'done':
@@ -16,7 +16,7 @@ while end_of_loop:
             if user_input > 10:
                 numbers.append(user_input)
     else:
-        end_of_loop = False
+        end_of_loop = True
 
     print(numbers)
 
