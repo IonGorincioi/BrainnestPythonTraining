@@ -12,7 +12,10 @@ def factorisation(number):
             prime_factors.append(divisor)
     if number > 1:
         prime_factors.append(number)
-    return prime_factors
+    for number in prime_factors:
+        largest_prime = max(prime_factors)
+    print(prime_factors)
+    return largest_prime
 
 
 print(factorisation(37))
