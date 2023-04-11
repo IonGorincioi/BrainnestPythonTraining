@@ -14,7 +14,7 @@ def factorisation(number):
         prime_factors.append(number)
     return prime_factors
 
+
 print(factorisation(37))
 print(factorisation(13195))
 print(factorisation(600851475143))
-
