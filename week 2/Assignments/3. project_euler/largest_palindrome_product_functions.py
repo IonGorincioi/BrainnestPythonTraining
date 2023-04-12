@@ -64,10 +64,8 @@ def largest_palindrome_product(products_list):
 
 user_input = int(input("Enter the number of digits: "))
 number_range = n_digit_range(user_input)
-# print(number_range)
 
 products = all_products(number_range)
-print(products)
 
 largest_palindrome = largest_palindrome_product(products)
 print(f"The largest palindrome product of two {user_input}-digit numbers is: {largest_palindrome}")
