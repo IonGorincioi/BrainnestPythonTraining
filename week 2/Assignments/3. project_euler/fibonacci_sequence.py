@@ -5,7 +5,6 @@
 
 def Fibonacci():
     fib = [1, 2]
-    total = 0
     end_of_sequence = False
     while not end_of_sequence:
         for index in range(len(fib)):
@@ -13,11 +12,17 @@ def Fibonacci():
             if next_num > 4000000:
                 end_of_sequence = True
         fib.append(next_num)
-
-        for number in fib:
-            if number % 2 == 0:
-                total += number
-    return total
+    return fib
 
 
-print(Fibonacci())
+def total_even_fib(fibonacci):
+    fib_even = []
+    for number in fibonacci:
+        if number % 2 == 0:
+            fib_even.append(number)
+            even_total = sum(fib_even)
+
+    return even_total
+
+
+print(f"Total of fibonacci even numbers: ", total_even_fib(Fibonacci()))
