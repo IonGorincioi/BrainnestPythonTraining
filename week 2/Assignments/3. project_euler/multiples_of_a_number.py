@@ -15,4 +15,5 @@ def multiples(number, factor1, factor2):
 multiples(10, 3, 5)
 multiples(100, 3, 5)
 multiples(1000, 3, 5)
+multiples(10000, 3, 5)
 
