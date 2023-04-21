@@ -11,6 +11,9 @@
 
 
 def sequence_terms(starting_number):
+    """
+    Determines the sequence of terms and returns them as a list
+    """
     seq = [starting_number]
     num_of_terms = 1
     while starting_number != 1:
@@ -18,6 +21,7 @@ def sequence_terms(starting_number):
             next_term = starting_number / 2
         else:
             next_term = 3 * starting_number + 1
+
         next_term = starting_number = int(next_term)
         seq.append(next_term)
         num_of_terms += 1
@@ -25,13 +29,15 @@ def sequence_terms(starting_number):
 
 
 def max_sequence_number(sequence):
+    """
+    Counts the number of elements from a list of elements
+    and return the number of elements
+    """
     count = 0
     for i in sequence:
         count += 1
     return count
 
-
-# print(max_sequence_number(sequence_terms(27)))
 
 number = 1
 max_value = 0
@@ -39,11 +45,10 @@ dict1 = {}
 while number < 1000000:
     number += 1
     sequence_length = max_sequence_number(sequence_terms(number))
-    # print(seq_length)
     if sequence_length > max_value:
         max_value = sequence_length
         dict1["number"] = number
         dict1["length"] = max_value
 
 
-print(f'Number {dict1["number"]} has the longest sequence: {dict1["length"]} terms')
+print(f'Number {dict1["number"]} has the longest sequence containing {dict1["length"]} terms.')
