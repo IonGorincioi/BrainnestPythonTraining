@@ -10,7 +10,7 @@ class Rectangle:
     #     return f"This rectangle is {self.height}m high and {self.width}m wide."
 
     def __repr__(self):
-        return f"Rectangle\n\tHeight: {self.height}m\n\tWidth: {self.width}m"
+        return f"Rectangle:\nHeight: {self.height}m\nWidth: {self.width}m"
 
 
 rectangle = Rectangle(10, 25)
