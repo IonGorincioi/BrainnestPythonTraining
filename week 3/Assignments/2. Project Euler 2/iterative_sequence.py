@@ -36,7 +36,7 @@ def max_sequence_number(sequence):
 number = 1
 max_value = 0
 dict1 = {}
-while number < 100:
+while number < 1000000:
     number += 1
     sequence_length = max_sequence_number(sequence_terms(number))
     # print(seq_length)
