@@ -1,0 +1,4 @@
+Write a Python program
+that reads a text file
+and prints the number of lines,
+words, and characters in the file.
