@@ -8,7 +8,7 @@ def sym_dif(s1, s2):
     return result
 
 
-set1 = {"javascript", "python", "C#"}
+set1 = {"javascript", "python", "C#", "C++"}
 set2 = {"html", "css", "javascript", 'C#'}
 
 symmetricDifference = sym_dif(set1, set2)
