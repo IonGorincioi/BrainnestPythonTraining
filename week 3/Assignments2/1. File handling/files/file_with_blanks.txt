@@ -1,11 +1,9 @@
 Write a Python program that reads
 
+
 a text file and removes all the
 
-
 blank lines. The modified text
-
-
 
 
 should be written back to the file.
