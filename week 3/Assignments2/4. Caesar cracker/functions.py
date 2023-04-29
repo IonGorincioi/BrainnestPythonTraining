@@ -1,4 +1,3 @@
-
 def get_alphabet():
     """ Opens and read the alphabet from a
         text file and returns the alphabet """
@@ -11,9 +10,12 @@ def get_alphabet():
         return alphabet
 
 
-
-
-def decrypted_message(message, alphabet, key):
+def decrypted_message(message, key):
+    """
+    Takes a message as am input and
+    returns it encrypted by a certain key
+    """
+    alphabet = get_alphabet()
     new_message = ""
     for ch in message:
         if ch in alphabet:

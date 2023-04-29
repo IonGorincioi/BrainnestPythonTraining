@@ -11,5 +11,5 @@ message = input("Enter message to crack: ")
 
 alphabet = get_alphabet()
 for key in range(0, 26):
-    potential_messages = decrypted_message(message.lower(), alphabet, key)
+    potential_messages = decrypted_message(message.lower(), key)
     print(f'Key: {key}\t| Text: {potential_messages}')
