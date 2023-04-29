@@ -16,7 +16,7 @@ Do you want to (e)ncrypt or (d)ecrypt?
 Please enter the key (0 to 25) to use.
 > 4
 Enter the message to encrypt.
-> Meet me by the rose bushes tonight.
+> meet me by the rose bushes tonight.
 QIIX QI FC XLI VSWI FYWLIW XSRMKLX.
 
 
