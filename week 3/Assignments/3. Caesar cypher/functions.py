@@ -1,4 +1,7 @@
 def caesar_cypher(initial_text, key, cypher):
+    """
+    Gets a text as an input and returns the text encrypted/decrypted
+    """
     final_text = ""
     alphabet = get_alphabet()
 
