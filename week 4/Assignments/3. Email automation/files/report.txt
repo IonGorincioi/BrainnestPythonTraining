@@ -1,0 +1,5 @@
+
+            REPORT
+
+This is the report that should be
+attached to every email sent
